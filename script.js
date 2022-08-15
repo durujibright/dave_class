@@ -3,7 +3,7 @@ var lastName = document.getElementById("Lastname")
 var userName = document.getElementById("Username")
 var email = document.getElementById("Email")
 var password = document.getElementById("Password")
-var confirm_password = document.getElementById("Confirm_password")
+var confirm = document.getElementById("Confirm_password")
 var submit = document.getElementById("  ")
 
 
@@ -73,15 +73,22 @@ function validate() {
         document.myForm.Email.focus();
         return false;
     }
-    if (document.myForm.Password.value === "  " || document.myForm.Password.value.length <= 8) {
+    if (document.myForm.Password.value === "") {
         alert("Input a strong Combination for your passcode.");
         document.myForm.Password.focus();
         return false;
+    }else if ( document.myForm.Password.value.length <= 8){
+        alert("Password can't be less than eight strong characters");
+        document.myForm.Password.focus();
+        return false;
     }
-    if (document.myForm.Confirm_password.value !== Password) {
+    if (document.myForm.Confirm_password.value !== password) {
         alert("your password dosent match");
         document.myForm.Confirm_password.focus();
-        return (true);
-    }
+        return (false);
+    }//else if (document.myForm.Password.value === confirm_password) {
+    //     alert("your form has been successfuly submited and under review");
+    //     return (false);
+    // }
     return (true);
 }
