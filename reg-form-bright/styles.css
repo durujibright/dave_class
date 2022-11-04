@@ -2,19 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
-    background-color: black;
+     background-image: url(./img.png);
+     background-size: cover;
 }
 
 fieldset {
     width: 400px;
     height: 745px;
     margin: 40px 650px;
-    border: solid 4px blue;
-    background-color: #000;
-    /* background-image: url(./write_ups.jpeg); */
+    border: solid 4px #808080;
+    background-color: transparent;
     background-size: cover;
     /* padding: 10px 10px 10px 80px; */
 }
@@ -24,26 +25,26 @@ legend {
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
-    color: blue;
+    color: #fff;
 }
 
 input {
     padding: 10px 70px;
     margin: 25px 50px;
-    background-color: #000;
+    background-color: transparent;
     text-align: center;
-    color: blue;
-    border: solid 4px blue;
+    color: #fff;
+    border: solid 4px #808080;
     text-transform: capitalize;
 }
 
 button {
     padding: 10px 10px;
     margin-left: 120px;
-    border: solid 4px blue;
-    background-color: #000;
+    border: solid 4px #808080;
+    background-color: transparent;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 700;
-    color: blue;
+    color: #fff;
 }

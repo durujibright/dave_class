@@ -6,6 +6,7 @@ var password = document.getElementById("Password")
 var confirm = document.getElementById("Confirm_password")
 var submit = document.getElementById("  ")
 
+const baseUrl = "https://nft.urbandesignsco.com/api";
 
 // function validate() {
 
@@ -82,13 +83,14 @@ function validate() {
         document.myForm.Password.focus();
         return false;
     }
-    if (document.myForm.Confirm_password.value !== password) {
-        alert("your password dosent match");
+    if (document.myForm.Confirm_password.value === password) {
+        alert("thanks for your details")
+        alert("your email is been reviewed")
         document.myForm.Confirm_password.focus();
         return (false);
-    }//else if (document.myForm.Password.value === confirm_password) {
-    //     alert("your form has been successfuly submited and under review");
-    //     return (false);
-    // }
+    }else {
+        alert("your password dosent match");
+        return (false);
+    }
     return (true);
 }
